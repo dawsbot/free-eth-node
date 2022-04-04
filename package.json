@@ -14,7 +14,8 @@
     "node-cache": "^5.1.2",
     "node-fetch": "^3.2.3",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-github-corner": "^2.5.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
