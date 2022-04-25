@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import NodeCache from "node-cache";
 import chains from "../../chains.min.json";
 
-const ipAddressDailyLimit = 1000;
+const ipAddressDailyLimit = 10000;
 
 type Data = {
   error: string;
