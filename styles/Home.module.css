@@ -118,4 +118,7 @@
     width: 100%;
     flex-direction: column;
   }
+  .code{
+    font-size: 12px;
+  }
 }
