@@ -58,9 +58,9 @@ const Home: NextPage = () => {
                 <h2>
                   {name} ({chain})
                 </h2>
-                <code
+                <div
                   className={styles.code}
-                >{`https://free-eth-node.com/api/${shortName}`}</code>
+                >{`https://free-eth-node.com/api/${shortName}`}</div>
               </div>
             ))}
           </div>
