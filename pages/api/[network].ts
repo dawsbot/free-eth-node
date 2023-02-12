@@ -8,17 +8,12 @@ type Data = {
 };
 
 const isDev = process.env.NODE_ENV !== "production";
-const allShortNames = chains.map((chain) => chain.shortName);
+const allShortNames = chains.map((chain) => chain.shortName.toLowerCase());
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const ipAddress = (
-    req.headers["x-forwarded-for"] ||
-    req.socket.remoteAddress ||
-    "missing"
-  ).toString();
-  const network = req.query.network as string;
+  const network = (req.query.network as string).toLowerCase();
   if (!allShortNames.includes(network)) {
     return res.status(400).json({
       error: `Network '${network}' not supported. Please use ${allShortNames
