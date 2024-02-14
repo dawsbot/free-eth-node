@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             Start projects quickly on any EVM network.
             <br />
             <code style={{ fontSize: "18px" }}>
-              Limit of 10,000 requests per day
+              Limit of 1,000 requests per day
             </code>
           </p>
 
