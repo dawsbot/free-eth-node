@@ -1,6 +1,9 @@
 {
   "name": "free-eth-node",
   "version": "0.1.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,18 +12,17 @@
     "build:chains": "node scripts/build-chains.js"
   },
   "dependencies": {
-    "axios": "^0.26.1",
-    "next": "12.1.4",
-    "node-fetch": "^3.2.3",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
+    "next": "^14.1.0",
+    "node-cache": "^5.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-github-corner": "^2.5.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23",
-    "@types/react": "17.0.43",
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
-    "typescript": "4.6.3"
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "eslint": "8.47",
+    "eslint-config-next": "^14.1.0",
+    "typescript": "5.1"
   }
 }

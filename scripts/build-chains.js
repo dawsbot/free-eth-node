@@ -1,10 +1,9 @@
-const axios = require("axios");
 const fs = require("fs");
 
 async function main() {
   let toReturn = [];
-  await axios("https://chainid.network/chains.json")
-    .then((res) => res.data)
+  await fetch("https://chainid.network/chains.json")
+    .then((res) => res.json())
     .then((datas) => {
       datas.forEach((data) => {
         const firstValidRpc = data.rpc.find((rpc) => !rpc.includes("{"));
