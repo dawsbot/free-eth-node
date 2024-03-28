@@ -11,6 +11,11 @@
     "lint": "next lint",
     "build:chains": "node scripts/build-chains.js"
   },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  },
   "dependencies": {
     "next": "^14.1.0",
     "node-cache": "^5.1.2",
@@ -23,6 +28,8 @@
     "@types/react": "^18.2.55",
     "eslint": "8.47",
     "eslint-config-next": "^14.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
     "typescript": "5.1"
   }
 }

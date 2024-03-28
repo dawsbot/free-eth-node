@@ -1,23 +1,23 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import React from "react";
-import styles from "../styles/Home.module.css";
 import chainsData from "../chains.min.json";
 import { SEO } from "../components/SEO";
+import styles from "../styles/Home.module.css";
 
+type ChainsData = Readonly<typeof chainsData>;
 const Home: NextPage = () => {
-  const [visibleChains, setVisibleChains] = React.useState([...chainsData]);
+  const [visibleChains, setVisibleChains] = React.useState<ChainsData>([
+    ...chainsData,
+  ]);
   const [searchValue, setSearchValue] = React.useState("");
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
+    const value: string = event.target.value.toLowerCase();
     setSearchValue(value);
-    const newChains = [...chainsData].filter((chain) => {
-      const shouldInclude = JSON.stringify(chain)
-        .toLowerCase()
-        .includes(value.toLowerCase());
+    const newChains: ChainsData = [...chainsData].filter((chain) => {
+      const shouldInclude = JSON.stringify(chain).toLowerCase().includes(value);
       return shouldInclude;
     });
+
     setVisibleChains(newChains);
   };
   return (
@@ -67,8 +67,15 @@ const Home: NextPage = () => {
         </main>
 
         <footer className={styles.footer}>
-          <a href="https://earni.fi" target="_blank" rel="noopener noreferrer">
-            Powered by Earnifi
+          <a
+            href="https://github.com/dawsbot"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "underline",
+            }}
+          >
+            Built by daws.eth
           </a>
         </footer>
       </div>

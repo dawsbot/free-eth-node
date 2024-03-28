@@ -1,6 +1,6 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import GithubCorner from "react-github-corner";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
