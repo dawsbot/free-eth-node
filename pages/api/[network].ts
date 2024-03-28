@@ -17,7 +17,7 @@ const myCache = new NodeCache({
 const DAILY_REQUEST_LIMIT_PER_IP_ADDRESS = 1_000;
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Data>,
 ) {
   const ipAddress = (
     req.headers["x-forwarded-for"] ||

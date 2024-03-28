@@ -1,5 +1,4 @@
 import Head from "next/head";
-import React from "react";
 import chains from "../chains.min.json";
 
 export const DEFAULT_TITLE = "Free Eth Node";

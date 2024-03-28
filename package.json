@@ -9,7 +9,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:chains": "node scripts/build-chains.js"
+    "build:chains": "node scripts/build-chains.js",
+    "prepare": "husky install",
+    "test": "npm run lint && tsc"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  },
+  "lint-staged": {
+    "*": "prettier -u --write"
   },
   "dependencies": {
     "next": "^14.1.0",
@@ -23,6 +33,10 @@
     "@types/react": "^18.2.55",
     "eslint": "8.47",
     "eslint-config-next": "^14.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
     "typescript": "5.1"
   }
 }
